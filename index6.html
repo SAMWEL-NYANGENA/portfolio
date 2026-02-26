@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Automation Systems Engineer specializing in n8n, AI, and workflow optimization.">
+<title>Samwel Nyangena | Automation Systems Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* BASE STYLES & SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+nav {
+  background: #0f172a;
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav .nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero .buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white !important;
+  border: 2px solid #3b82f6;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #3b82f6;
+}
+
+/* TRUST STRIP */
+.trust {
+  background: white;
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.trust-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.trust-icons p {
+  font-weight: 600;
+  color: #64748b;
+  font-size: 18px;
+}
+
+/* SECTION */
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+  color: #0f172a;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.project-iframe {
+  width: calc(100% + 50px); 
+  margin: -25px -25px 20px -25px; 
+  aspect-ratio: 16 / 9; 
+  display: block;
+  border-radius: 12px 12px 0 0; 
+  border: none; 
+  border-bottom: 1px solid #e2e8f0; 
+  background-color: #111827; 
+}
+
+.project-image {
+  width: calc(100% + 50px); 
+  margin: -25px -25px 20px -25px; 
+  aspect-ratio: 16 / 9; 
+  display: block;
+  border-radius: 12px 12px 0 0; 
+  border-bottom: 1px solid #e2e8f0; 
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.project-card p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.project-card strong {
+  color: #0f172a;
+}
+
+.tech-badges {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* PROCESS */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  background: #2563eb;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.step h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.step p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* CTA */
+.cta {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+.cta p {
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  background: #020617;
+  color: #94a3b8;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: #60a5fa;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #93c5fd;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  nav .nav-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero .buttons {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="container nav-content">
+    <div style="font-size: 1.2rem;"><strong>Samwel Nyangena</strong> <span style="color:#64748b;">| Automation Engineer</span></div>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn-primary">Book Strategy Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>We Build Scalable Automation Systems Using n8n & AI</h1>
+    <p>Transforming manual operations into intelligent workflows that reduce costs, eliminate repetitive work, and increase operational efficiency.</p>
+    <div class="buttons">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Book Free Audit</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust">
+  <div class="container">
+    <div style="color: #64748b; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Core Tech Stack</div>
+    <div class="trust-icons">
+      <p>n8n</p>
+      <p>YOLOv8 / CV</p>
+      <p>OpenAI / Gemini</p>
+      <p>Vapi (Voice AI)</p>
+      <p>WhatsApp API</p>
+      <p>Python</p>
+      <p>monday.com</p>
+      <p>hubspot</p>
+      <P>Zoho</p>
+      <p>GHL</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-title">Featured Automation Systems</h2>
+
+    <div class="projects-grid">
+
+      <!-- NEW PROJECT 1: Vehicle Counting -->
+      <div class="project-card">
+        
+        <!-- GOOGLE DRIVE VIDEO EMBED (Preview Mode) -->
+        <iframe 
+          class="project-iframe" 
+          src="https://drive.google.com/file/d/1grG-SfkIGGeYWl7JTYQVO5tafzsJUdSy/preview" 
+          allow="autoplay">
+        </iframe>
+
+        <h3>AI Computer Vision Vehicle Tracker</h3>
+        <p><strong>Problem:</strong> Traditional traffic monitoring requires manual counting or expensive hardware, making it difficult to gather real-time data for urban planning.</p>
+        <p><strong>Solution:</strong> Developed a computer vision system using <strong>YOLOv8</strong> for object detection and the <strong>Supervision</strong> library to track vehicles crossing a virtual line. The data is processed and logged via <strong>n8n</strong> for automated reporting.</p>
+        <p><strong>Impact:</strong> Enables 24/7 automated traffic analytics with high precision, providing structured data for logistics and smart city infrastructure management.</p>
+        
+        <div class="tech-badges">
+          <span class="badge">YOLOv8</span>
+          <span class="badge">Supervision</span>
+          <span class="badge">Python</span>
+          <span class="badge">n8n</span>
+          <a href="https://drive.google.com/file/d/1grG-SfkIGGeYWl7JTYQVO5tafzsJUdSy/view?usp=sharing" target="_blank" class="badge" style="background: #2563eb; color: white; text-decoration: none;">🔗 Full Video</a>
+        </div>
+      </div>
+
+     <!-- PROJECT 2: WhatsApp AI Assistant -->
+      <div class="project-card">
+        <iframe 
+          class="project-iframe" 
+          src="https://go.screenpal.com/player/cOnO1Nn0Npl?title=0&controls=1" 
+          allowfullscreen="true">
+        </iframe>
+        <h3>Autonomous WhatsApp Sales Agent</h3>
+        <p><strong>Problem:</strong> High volume of repetitive customer inquiries led to lost orders and overwhelmed support staff.</p>
+        <p><strong>Solution:</strong> Built an LLM-powered agent in n8n featuring chat memory, strict tool usage (Google Sheets for live inventory updates), and a RAG knowledge base for business FAQs.</p>
+        <p><strong>Impact:</strong> Automates routine order processing 24/7, while confidence-scoring algorithms seamlessly escalate complex scenarios to human agents.</p>
+        <div class="tech-badges">
+          <span class="badge">n8n</span>
+          <span class="badge">WhatsApp API</span>
+          <span class="badge">LLM / RAG</span>
+          <span class="badge">Google Sheets</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: OCR Extraction -->
+      <div class="project-card">
+        <iframe 
+          class="project-iframe" 
+          src="https://go.screenpal.com/player/cOVDD2nrKSg?title=0&controls=1" 
+          allowfullscreen="true">
+        </iframe>
+        <h3>Production-Ready Financial OCR</h3>
+        <p><strong>Problem:</strong> Processing invoices and receipts required hours of manual data entry, delaying financial reporting.</p>
+        <p><strong>Solution:</strong> Engineered a completely hands-off n8n workflow that ingests financial documents, runs OCR to extract structured data, and logs it securely.</p>
+        <p><strong>Impact:</strong> Eliminated 100% of manual entry tasks, reducing processing time to seconds and producing instantly analytics-ready financial records.</p>
+        <div class="tech-badges">
+          <span class="badge">n8n</span>
+          <span class="badge">Document AI / OCR</span>
+          <span class="badge">Google Sheets</span>
+          <span class="badge">Regex</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: Vapi AI Voice Caller -->
+      <div class="project-card">
+        <iframe 
+          class="project-iframe" 
+          src="https://go.screenpal.com/player/cOnOiun0NJv?title=0&controls=1" 
+          allowfullscreen="true">
+        </iframe>
+        <h3>Instant AI Voice Lead Qualification</h3>
+        <p><strong>Problem:</strong> Delayed follow-ups resulted in lost hot prospects, and sales teams wasted hours manually screening inquiries.</p>
+        <p><strong>Solution:</strong> Integrated n8n with Vapi to trigger an intelligent outbound AI voice call the second a lead submits a form, generating structured qualification data.</p>
+        <p><strong>Impact:</strong> Reaches leads instantly to drive higher conversions and completely eliminates manual screening costs.</p>
+        <div class="tech-badges">
+          <span class="badge">n8n</span>
+          <span class="badge">Vapi (Voice AI)</span>
+          <span class="badge">Webhooks</span>
+          <span class="badge">CRM API</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="background: #f1f5f9;">
+  <div class="container">
+    <h2 class="section-title">My Implementation Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Audit & Discovery</h4>
+        <p>We map out your current bottlenecks, manual tasks, and software ecosystem.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Architecture Design</h4>
+        <p>I create a visual blueprint of the data flow and tool integrations required.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Build & Test</h4>
+        <p>Developing the n8n workflows with strict error handling and edge-case testing.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Deploy & Maintain</h4>
+        <p>Pushing to production, monitoring API limits, and providing ongoing support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA & FOOTER COMBINED AREA -->
+<div class="container">
+  <section class="cta">
+    <h2>Ready to Automate Your Operations?</h2>
+    <p>Let’s identify one process you can automate and save 10+ hours a week.</p>
+    <a href="mailto:samwelnyangena90@gmail.com" class="btn-primary" style="font-size: 18px; padding: 15px 30px;">Let's Talk - Send an Email</a>
+  </section>
+</div>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-links">
+      <a href="mailto:samwelnyangena90@gmail.com">Email Me</a>
+      <a href="https://linkedin.com/in/samwelchulo" target="_blank">LinkedIn</a>
+      <a href="https://github.com/SAMWEL-NYANGENA" target="_blank">GitHub</a>
+    </div>
+    <p>© 2026 Samwel Nyangena | Automation Systems Engineer. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
