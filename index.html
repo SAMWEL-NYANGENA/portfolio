@@ -195,16 +195,6 @@ section {
   background-color: #111827; 
 }
 
-.project-image {
-  width: calc(100% + 50px); 
-  margin: -25px -25px 20px -25px; 
-  aspect-ratio: 16 / 9; 
-  display: block;
-  border-radius: 12px 12px 0 0; 
-  border-bottom: 1px solid #e2e8f0; 
-  object-fit: cover;
-}
-
 .project-card h3 {
   margin-bottom: 12px;
   font-size: 20px;
@@ -381,15 +371,15 @@ footer a:hover {
     <div style="color: #64748b; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Core Tech Stack</div>
     <div class="trust-icons">
       <p>n8n</p>
-      <p>YOLOv8 / CV</p>
-      <p>OpenAI / Gemini</p>
       <p>Vapi (Voice AI)</p>
-      <p>WhatsApp API</p>
+      <p>OpenAI / DALL-E 3</p>
+      <p>YOLOv8 / CV</p>
+      <p>WhatsApp / Telegram</p>
+      <p>HubSpot / Stripe</p>
+      <p>Freshdesk / monday.com</p>
+      <p>OCR / Document AI</p>
       <p>Python</p>
-      <p>monday.com</p>
-      <p>hubspot</p>
-      <P>Zoho</p>
-      <p>GHL</p>
+      <p>GHL / Zoho</p>
     </div>
   </div>
 </section>
@@ -401,84 +391,108 @@ footer a:hover {
 
     <div class="projects-grid">
 
-      <!-- NEW PROJECT 1: Vehicle Counting -->
+      <!-- PROJECT 1: Telegram Support Agent -->
       <div class="project-card">
-        
-        <!-- GOOGLE DRIVE VIDEO EMBED (Preview Mode) -->
-        <iframe 
-          class="project-iframe" 
-          src="https://drive.google.com/file/d/1grG-SfkIGGeYWl7JTYQVO5tafzsJUdSy/preview" 
-          allow="autoplay">
-        </iframe>
-
-        <h3>AI Computer Vision Vehicle Tracker</h3>
-        <p><strong>Problem:</strong> Traditional traffic monitoring requires manual counting or expensive hardware, making it difficult to gather real-time data for urban planning.</p>
-        <p><strong>Solution:</strong> Developed a computer vision system using <strong>YOLOv8</strong> for object detection and the <strong>Supervision</strong> library to track vehicles crossing a virtual line. The data is processed and logged via <strong>n8n</strong> for automated reporting.</p>
-        <p><strong>Impact:</strong> Enables 24/7 automated traffic analytics with high precision, providing structured data for logistics and smart city infrastructure management.</p>
-        
+        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnOXpn08g0?title=0&controls=1" allowfullscreen="true"></iframe>
+        <h3>Telegram Support & Project Sync Agent</h3>
+        <p><strong>Problem:</strong> Siloed support messages on Telegram caused slow response times and lack of operational visibility.</p>
+        <p><strong>Solution:</strong> A Telegram bot that creates tickets in Freshdesk and simultaneously logs tasks on a monday.com dashboard for the project team.</p>
+        <p><strong>Impact:</strong> Unified customer communication with project management, ensuring 100% accountability and faster resolution cycles.</p>
         <div class="tech-badges">
-          <span class="badge">YOLOv8</span>
-          <span class="badge">Supervision</span>
-          <span class="badge">Python</span>
           <span class="badge">n8n</span>
-          <a href="https://drive.google.com/file/d/1grG-SfkIGGeYWl7JTYQVO5tafzsJUdSy/view?usp=sharing" target="_blank" class="badge" style="background: #2563eb; color: white; text-decoration: none;">🔗 Full Video</a>
+          <span class="badge">Telegram API</span>
+          <span class="badge">Freshdesk</span>
+          <span class="badge">monday.com</span>
         </div>
       </div>
 
-     <!-- PROJECT 2: WhatsApp AI Assistant -->
+      <!-- PROJECT 2: DALL-E 3 Social Media -->
       <div class="project-card">
-        <iframe 
-          class="project-iframe" 
-          src="https://go.screenpal.com/player/cOnO1Nn0Npl?title=0&controls=1" 
-          allowfullscreen="true">
-        </iframe>
-        <h3>Autonomous WhatsApp Sales Agent</h3>
-        <p><strong>Problem:</strong> High volume of repetitive customer inquiries led to lost orders and overwhelmed support staff.</p>
-        <p><strong>Solution:</strong> Built an LLM-powered agent in n8n featuring chat memory, strict tool usage (Google Sheets for live inventory updates), and a RAG knowledge base for business FAQs.</p>
-        <p><strong>Impact:</strong> Automates routine order processing 24/7, while confidence-scoring algorithms seamlessly escalate complex scenarios to human agents.</p>
+        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnfXTn3HFj?title=0&controls=1" allowfullscreen="true"></iframe>
+        <h3>AI-Driven Social Media Content Engine</h3>
+        <p><strong>Problem:</strong> Creating high-quality image content and captions daily is a massive manual time-sink.</p>
+        <p><strong>Solution:</strong> Automated pipeline that fetches raw data from Google Sheets, generates DALL-E 3 images and GPT captions, and posts directly to Instagram.</p>
+        <p><strong>Impact:</strong> Achieved a "set and forget" social media strategy with consistent visuals without manual effort.</p>
         <div class="tech-badges">
+          <span class="badge">DALL-E 3</span>
           <span class="badge">n8n</span>
-          <span class="badge">WhatsApp API</span>
-          <span class="badge">LLM / RAG</span>
-          <span class="badge">Google Sheets</span>
+          <span class="badge">Instagram API</span>
+          <span class="badge">GPT-4</span>
         </div>
       </div>
 
-      <!-- PROJECT 3: OCR Extraction -->
+      <!-- PROJECT 3: Stripe/HubSpot Finance -->
       <div class="project-card">
-        <iframe 
-          class="project-iframe" 
-          src="https://go.screenpal.com/player/cOVDD2nrKSg?title=0&controls=1" 
-          allowfullscreen="true">
-        </iframe>
-        <h3>Production-Ready Financial OCR</h3>
-        <p><strong>Problem:</strong> Processing invoices and receipts required hours of manual data entry, delaying financial reporting.</p>
-        <p><strong>Solution:</strong> Engineered a completely hands-off n8n workflow that ingests financial documents, runs OCR to extract structured data, and logs it securely.</p>
-        <p><strong>Impact:</strong> Eliminated 100% of manual entry tasks, reducing processing time to seconds and producing instantly analytics-ready financial records.</p>
+        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnOXbn084E?title=0&controls=1" allowfullscreen="true"></iframe>
+        <h3>Stripe to CRM Financial Sync Engine</h3>
+        <p><strong>Problem:</strong> Manual updates between billing (Stripe) and sales (HubSpot) lead to data lag and missing PO numbers.</p>
+        <p><strong>Solution:</strong> An n8n logic engine that triggers on invoices, validates data, updates CRM deal stages, and alerts accounting via Slack.</p>
+        <p><strong>Impact:</strong> Eliminated manual billing entries and ensured sales and finance teams are always synced in real-time.</p>
         <div class="tech-badges">
+          <span class="badge">Stripe API</span>
+          <span class="badge">HubSpot</span>
+          <span class="badge">Slack</span>
           <span class="badge">n8n</span>
-          <span class="badge">Document AI / OCR</span>
-          <span class="badge">Google Sheets</span>
-          <span class="badge">Regex</span>
         </div>
       </div>
 
-      <!-- PROJECT 4: Vapi AI Voice Caller -->
+      <!-- PROJECT 4: Vapi AI Voice RESTORED -->
       <div class="project-card">
-        <iframe 
-          class="project-iframe" 
-          src="https://go.screenpal.com/player/cOnOiun0NJv?title=0&controls=1" 
-          allowfullscreen="true">
-        </iframe>
+        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnOiun0NJv?title=0&controls=1" allowfullscreen="true"></iframe>
         <h3>Instant AI Voice Lead Qualification</h3>
-        <p><strong>Problem:</strong> Delayed follow-ups resulted in lost hot prospects, and sales teams wasted hours manually screening inquiries.</p>
-        <p><strong>Solution:</strong> Integrated n8n with Vapi to trigger an intelligent outbound AI voice call the second a lead submits a form, generating structured qualification data.</p>
-        <p><strong>Impact:</strong> Reaches leads instantly to drive higher conversions and completely eliminates manual screening costs.</p>
+        <p><strong>Problem:</strong> Delayed follow-ups on web leads result in low conversion; manual screening is expensive and slow.</p>
+        <p><strong>Solution:</strong> n8n integration with Vapi to trigger an outbound AI voice call the moment a lead submits a form, qualifying the lead instantly.</p>
+        <p><strong>Impact:</strong> Reaches prospects in under 10 seconds, generating structured qualification data and dramatically increasing conversion rates.</p>
         <div class="tech-badges">
-          <span class="badge">n8n</span>
           <span class="badge">Vapi (Voice AI)</span>
+          <span class="badge">n8n</span>
           <span class="badge">Webhooks</span>
           <span class="badge">CRM API</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 5: OCR Extraction -->
+      <div class="project-card">
+        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOVDD2nrKSg?title=0&controls=1" allowfullscreen="true"></iframe>
+        <h3>Production-Ready Financial OCR</h3>
+        <p><strong>Problem:</strong> Processing physical or digital invoices required hours of manual data entry into spreadsheets.</p>
+        <p><strong>Solution:</strong> Engineered an n8n workflow that ingests documents, runs advanced OCR to extract line items, and logs structured data instantly.</p>
+        <p><strong>Impact:</strong> Reduced document processing time by 95% and eliminated human transcription errors.</p>
+        <div class="tech-badges">
+          <span class="badge">Document AI</span>
+          <span class="badge">n8n</span>
+          <span class="badge">Google Sheets</span>
+          <span class="badge">OCR</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 6: Vehicle Counting (CV) -->
+      <div class="project-card">
+        <iframe class="project-iframe" src="https://drive.google.com/file/d/1grG-SfkIGGeYWl7JTYQVO5tafzsJUdSy/preview" allow="autoplay"></iframe>
+        <h3>AI Computer Vision Vehicle Tracker</h3>
+        <p><strong>Problem:</strong> Real-time traffic analytics typically require expensive hardware or manual counting.</p>
+        <p><strong>Solution:</strong> Custom computer vision system using YOLOv8 and Supervision to track vehicles crossing virtual lines for precise traffic data.</p>
+        <p><strong>Impact:</strong> Enables cost-effective, 24/7 automated traffic monitoring for smart city logistics.</p>
+        <div class="tech-badges">
+          <span class="badge">YOLOv8</span>
+          <span class="badge">Python</span>
+          <span class="badge">Computer Vision</span>
+          <span class="badge">n8n</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 7: WhatsApp AI Assistant -->
+      <div class="project-card">
+        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnO1Nn0Npl?title=0&controls=1" allowfullscreen="true"></iframe>
+        <h3>Autonomous WhatsApp Sales Agent</h3>
+        <p><strong>Problem:</strong> High inquiry volume during off-hours led to lost leads and slow customer response times.</p>
+        <p><strong>Solution:</strong> Built an LLM-powered WhatsApp agent with chat memory and RAG knowledge base to handle inventory and FAQs autonomously.</p>
+        <p><strong>Impact:</strong> Increased lead conversion by providing 24/7 instant responses and qualification.</p>
+        <div class="tech-badges">
+          <span class="badge">WhatsApp API</span>
+          <span class="badge">LLM / RAG</span>
+          <span class="badge">n8n</span>
+          <span class="badge">Google Sheets</span>
         </div>
       </div>
 
