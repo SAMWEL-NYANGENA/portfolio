@@ -226,6 +226,28 @@ section {
   border-radius: 20px;
 }
 
+/* NEW: Featured Project Highlight */
+.project-card.featured {
+  border: 2px solid #2563eb;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card.featured::before {
+  content: "NEW";
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: #2563eb;
+  color: white;
+  padding: 5px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
 /* PROCESS */
 .process-steps {
   display: grid;
@@ -335,6 +357,10 @@ footer a:hover {
   .hero .buttons {
     flex-direction: column;
   }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -391,7 +417,25 @@ footer a:hover {
 
     <div class="projects-grid">
 
-      <!-- PROJECT 1: Automated Apify Lead Gen & Email Outreach -->
+      <!-- PROJECT 1: Lead Nurturing System (NEW) -->
+      <div class="project-card featured">
+        <!-- PLACEHOLDER: Paste your Lead Nurturing video link here -->
+        <iframe class="project-iframe" src="https://go.screenpal.com/watch/cOeD2inZKaF" allowfullscreen="true"></iframe>
+        <h3>AI Lead Nurturing & Scoring Engine</h3>
+        <p><strong>Problem:</strong> Manual lead follow-up is inconsistent, slow, and fails to prioritize high-value opportunities, resulting in lost revenue.</p>
+        <p><strong>Solution:</strong> An end-to-end automation that triggers on form submission, logs lead data to Google Sheets, uses an AI agent to craft hyper-personalized emails based on budget/timeline/interest, automatically scores leads (High/Medium/Low/Hot), updates the CRM with status/tags, and alerts the sales team via Slack in real-time.</p>
+        <p><strong>Impact:</strong> Achieved 100% immediate response rate, eliminated manual data entry, and enabled intelligent lead prioritization that ensures sales focuses on the hottest opportunities first.</p>
+        <div class="tech-badges">
+          <span class="badge">n8n</span>
+          <span class="badge">Google Sheets</span>
+          <span class="badge">OpenAI GPT-4o</span>
+          <span class="badge">Gmail</span>
+          <span class="badge">Slack</span>
+          <span class="badge">Lead Scoring</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: Automated Apify Lead Gen & Email Outreach -->
       <div class="project-card">
         <!-- PASTE YOUR NEW VIDEO LINK IN THE SRC BELOW -->
         <iframe class="project-iframe" src="https://go.screenpal.com/watch/cOe1lDnZYyg" allowfullscreen="true"></iframe>
@@ -407,7 +451,7 @@ footer a:hover {
         </div>
       </div>
 
-      <!-- PROJECT 2: Autonomous SEO Engine -->
+      <!-- PROJECT 3: Autonomous SEO Engine -->
       <div class="project-card">
         <iframe class="project-iframe" src="https://go.screenpal.com/watch/cOe1lQnZYxr" allowfullscreen="true"></iframe>
         <h3>Autonomous SEO & Publishing Engine</h3>
@@ -423,7 +467,7 @@ footer a:hover {
         </div>
       </div>
 
-      <!-- PROJECT 3: Telegram Support Agent -->
+      <!-- PROJECT 4: Telegram Support Agent -->
       <div class="project-card">
         <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnOXpn08g0?title=0&controls=1" allowfullscreen="true"></iframe>
         <h3>Telegram Support & Project Sync Agent</h3>
@@ -438,7 +482,7 @@ footer a:hover {
         </div>
       </div>
 
-      <!-- PROJECT 4: DALL-E 3 Social Media -->
+      <!-- PROJECT 5: DALL-E 3 Social Media -->
       <div class="project-card">
         <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnfXTn3HFj?title=0&controls=1" allowfullscreen="true"></iframe>
         <h3>AI-Driven Social Media Content Engine</h3>
@@ -453,7 +497,7 @@ footer a:hover {
         </div>
       </div>
 
-      <!-- PROJECT 5: Stripe/HubSpot Finance -->
+      <!-- PROJECT 6: Stripe/HubSpot Finance -->
       <div class="project-card">
         <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnOXbn084E?title=0&controls=1" allowfullscreen="true"></iframe>
         <h3>Stripe to CRM Financial Sync Engine</h3>
@@ -468,7 +512,7 @@ footer a:hover {
         </div>
       </div>
 
-      <!-- PROJECT 6: Vapi AI Voice RESTORED -->
+      <!-- PROJECT 7: Vapi AI Voice RESTORED -->
       <div class="project-card">
         <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnOiun0NJv?title=0&controls=1" allowfullscreen="true"></iframe>
         <h3>Instant AI Voice Lead Qualification</h3>
@@ -483,9 +527,9 @@ footer a:hover {
         </div>
       </div>
 
-      <!-- PROJECT 7: OCR Extraction -->
+      <!-- PROJECT 8: OCR Extraction -->
       <div class="project-card">
-        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOVDD2nrKSg?title=0&controls=1" allowfullscreen="true"></iframe>
+        <iframe class="project-iframe" src="https://go.screenpal.com/watch/cOeD2DnZKAi" allowfullscreen="true"></iframe>
         <h3>Production-Ready Financial OCR</h3>
         <p><strong>Problem:</strong> Processing physical or digital invoices required hours of manual data entry into spreadsheets.</p>
         <p><strong>Solution:</strong> Engineered an n8n workflow that ingests documents, runs advanced OCR to extract line items, and logs structured data instantly.</p>
@@ -498,5 +542,76 @@ footer a:hover {
         </div>
       </div>
 
-      <!-- PROJECT 8: Vehicle Counting (CV) -->
-      <div c
+      <!-- PROJECT 9: Vehicle Counting (CV) -->
+      <div class="project-card">
+        <iframe class="project-iframe" src="https://go.screenpal.com/player/cOnOibn0NJu?title=0&controls=1" allowfullscreen="true"></iframe>
+        <h3>Computer Vision Traffic Analytics</h3>
+        <p><strong>Problem:</strong> Manual traffic counting is labor-intensive and lacks real-time analytics capabilities.</p>
+        <p><strong>Solution:</strong> Deployed YOLOv8-based computer vision system integrated with n8n for automated vehicle detection, counting, and reporting.</p>
+        <p><strong>Impact:</strong> Enabled 24/7 automated traffic monitoring with real-time dashboards and historical analytics.</p>
+        <div class="tech-badges">
+          <span class="badge">YOLOv8</span>
+          <span class="badge">Computer Vision</span>
+          <span class="badge">n8n</span>
+          <span class="badge">Python</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="background: white;">
+  <div class="container">
+    <h2 class="section-title">How We Work</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Discovery</h4>
+        <p>We audit your current workflows and identify automation opportunities with highest ROI.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Design</h4>
+        <p>We architect scalable n8n workflows tailored to your specific business logic.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Build</h4>
+        <p>We develop and test your automation system with error handling and monitoring.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Deploy</h4>
+        <p>We launch your system with documentation and training for your team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to Automate Your Business?</h2>
+      <p>Book a free 30-minute strategy call to discuss your automation needs.</p>
+      <a href="mailto:samwel@example.com" class="btn-primary" style="font-size: 18px; padding: 15px 30px;">Book Strategy Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#projects">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; 2024 Samwel Nyangena. Automation Systems Engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>
